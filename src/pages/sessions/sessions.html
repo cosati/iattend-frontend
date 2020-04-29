@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Próximos treinos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <button ion-item *ngFor="let item of items" class="session">
+      <ion-thumbnail item-start>
+        <div class="date">
+          <h1>{{item.start | slice:0:5}}</h1>
+          <h3>{{item.dayOfWeek}}</h3>
+        </div>
+      </ion-thumbnail>
+      <div class="location">
+        <h2>{{item.place}}</h2>
+        <p>{{item.address}}</p>
+        <p>{{item.start | slice:-5}} - {{item.end | slice:-5}}</p>
+      </div>
+        <ion-icon name="checkbox" class="checked" *ngIf="item.checkedIn"></ion-icon>
+    </button>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,25 @@
+page-sessions {
+
+    .session {
+        border: 1px solid black;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    .item-md ion-thumbnail {
+        min-height: 0;
+    }
+
+    .location {
+        display: block;
+        float: left;
+    }
+
+    .checked {
+        float: right;
+        display: block;
+        font-size: 40px;
+        margin-top: 7px;
+    }
+
+}
