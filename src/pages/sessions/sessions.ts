@@ -22,6 +22,7 @@ export class SessionsPage {
   ionViewDidLoad() {
     this.sessionService.findNext()
       .subscribe(response => {
+        console.log(response['content']);
         this.items = response['content'];
       },
       error => {}
